@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>cedricb</Authors>
+    <PackageId>Avae.Printables.Xps</PackageId>
+    <Product>Avae.Printables.Xps</Product>
+    <Description>Printing for avalonia</Description>
+    <PackageTags>avalonia;printing;crossplatform</PackageTags>
+    <RepositoryUrl>https://github.com/cedric56/Avae.Printables.Xps</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/cedric56/Avae.Printables.Xps</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>Licence.md</PackageLicenseFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avae.Printables" Version="2.0.1" />
+    <PackageReference Include="XpsToPdf" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include="Licence.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
