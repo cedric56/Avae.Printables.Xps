@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetFrameworks>net8.0-windows10.0.19041.0;</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.0</Version>
+    <Version>3.0.0</Version>
     <Authors>cedricb</Authors>
     <PackageId>Avae.Printables.Xps</PackageId>
     <Product>Avae.Printables.Xps</Product>
@@ -16,8 +16,9 @@
     <PackageLicenseFile>Licence.md</PackageLicenseFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Avae.Printables" Version="2.0.1" />
+    <PackageReference Include="Avae.Printables" Version="3.0.0" />
     <PackageReference Include="XpsToPdf" Version="1.0.6" />
   </ItemGroup>
 
@@ -25,4 +26,9 @@
     <None Include="README.md" Pack="true" PackagePath="" />
     <None Include="Licence.md" Pack="true" PackagePath="" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="PdfSharp.SharpZipLib\ReadMe.txt" Pack="true" PackagePath="lib\net8.0-windows10.0.19041\Avae.Printables.Xps\PdfSharp.SharpZipLib\" />
+  </ItemGroup>
+  
 </Project>

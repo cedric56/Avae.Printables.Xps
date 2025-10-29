@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Avae.Printables.Xps</id>
+    <version>1.0.1</version>
+    <title>Avae Printables.Xps</title>
+    <authors>cedric56</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Avalonia print functionalities</description>
+    <summary>Avalonia print functionalities</summary>
+    <releaseNotes>Initial release of avae printables package</releaseNotes>
+    <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
+    <license type="expression">MIT</license>
+
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+
+  <files>
+    <!-- README file -->
+    <file src="content\PdfSharp.SharpZipLib\ReadMe.txt" target="lib\net8.0-windows10.0.19041\Avae.Printables.Xps\PdfSharp.SharpZipLib\" />    
+  </files>
+</package>

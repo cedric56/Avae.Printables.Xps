@@ -10,19 +10,18 @@ namespace Avae.Printables
             if(implementation is null)
                 throw new ArgumentNullException(nameof(implementation), "UsePrintables must be set before.");
 
-#if WINDOWS10_0_19041_0_OR_GREATER
             if (implementation is PrintingService service)
             {
-                PrinterBase XpsToPdf(string title, string file)
+                string ConvertXpsToPdf(string file)
                 {
                     var path = Path.GetTempPath() + "temp.pdf";
                     PdfSharp.Xps.XpsConverter.Convert(file, path, 0);
-                    return new PdfPrinter(PrintingService.GetActiveWindow(), title, path);
+                    return path;
                 }
-
-                service.Entries.Add(".xps", XpsToPdf);
+                service.Conversions.Add(".xps", (file) => Task.FromResult(ConvertXpsToPdf(file)));
+                service.Entries.Add(".xps", (title, file) => Task.FromResult<PrinterBase>(new PdfPrinter(PrintingService.GetActiveWindow(), title, ConvertXpsToPdf(file))));
             }
-#endif
+
             return builder;
         }
     }
